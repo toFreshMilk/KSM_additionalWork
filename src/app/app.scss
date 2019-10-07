@@ -1,0 +1,585 @@
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+@import "theme/popup";
+@import "theme/ksm-icon";
+@import "theme/forms";
+@import "theme/modal-detail";
+
+// 공통 기능
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  color: #000000;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+.scroll-content {
+  background-color: #ffffff;
+  padding: 0 !important;
+}
+
+.gnbBg .scroll-content {
+  background-color: #ededed;
+}
+
+.loginIcon[ion-button] {
+  background: url(/assets/imgs/sprite.png) -504px -771px;
+  background-size: 215px;
+  width: 37px;
+  height: 31px;
+  margin: 0 auto !important;
+}
+
+.loginIcon.logoutIcon {
+  background-position: -537px -771px;
+}
+
+// 사이드메뉴
+ion-menu[side=left] .menu-inner {
+  width: 100%;
+
+  .scroll-content {
+    background-color: #e6e6e6;
+  }
+
+  ion-content {
+    h3 {
+      line-height: 40px;
+      color: color($colors, pointColor2-01);
+      text-indent: 10px;
+      background-color: #ffffff;
+    }
+
+    ion-grid.totalMenu {
+      padding: 0;
+      ion-row.icon-row {
+        background-color: color($colors, pointColor2-1);
+        border-top: 1px solid color($colors, pointColor2-2);
+        border-bottom: 1px solid color($colors, pointColor2-2);
+        box-shadow: 0px 1px 2px 0px #2f5272;
+        line-height: 81px;
+
+        ion-col {
+          border-right: 1px solid color($colors, pointColor2-2);
+          text-align: center;
+          padding: 0;
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 11px;
+            margin-bottom: 0;
+            color: color($colors, pointColor2-4);
+          }
+        }
+        ion-col.active {
+          .ksmIntro {
+            background-position: -339px -281px;
+          }
+          .ksmInfo {
+            background-position: -373px -281px;
+          }
+          .ksmOrderSubmit {
+            background-position: -420px -289px;
+          }
+          .tradeInfo {
+            background-position: -441px -281px;
+          }
+          p {
+            color: yellow;
+          }
+        }
+
+        ion-col:last-child {
+          border-right: none;
+        }
+      }
+      //중첩이 너무 길어지면 스타일이 안먹힘.. 밑으로 뺌
+      //전체메뉴 아이콘
+      button.icon-row-btn {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        text-align: center;
+        ion-icon {
+          background: url(/assets/imgs/sprite.png);
+          background-size: 340px;
+          width: 35px;
+          height: 36px;
+        }
+        ion-icon.ksmIntro {
+          background-position: -339px -246px;
+        }
+        ion-icon.ksmInfo {
+          background-position: -373px -246px;
+        }
+        ion-icon.ksmOrderSubmit {
+          background-size: 350px;
+          background-position: -420px -252px;
+        }
+        ion-icon.tradeInfo {
+          background-position: -441px -244px;
+        }
+      }
+
+      ion-row.acco-row {
+        background-color: color($colors, pointColor2-1);
+        ion-col {
+          border-right: 1px solid color($colors, pointColor2-3);
+          border-bottom: 1px solid color($colors, pointColor2-3);
+          background: url(/assets/imgs/sidebar_acco.png);
+          text-align: left;
+          font-size: 13px;
+          font-weight: bold;
+          color: color($colors, basicWhite);
+          line-height: 29px;
+        }
+        ion-col:last-child(2n+1) {
+          border-right: none;
+        }
+      }
+    }
+
+    div.directBtnList {
+      margin: 0;
+      padding: 10px 10px 17px 10px;
+      width: 100%;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      border-bottom: 1px solid #b2b2b2;
+
+      h4.btnListHeader {
+        margin-bottom: 8px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      div.btnWrapper {
+
+        button {
+          border: 1px solid #999999;
+          border-radius: 5px;
+          font-size: 14px;
+          background-color: #ffffff;
+          color: #15538C;
+          font-weight: bold;
+          line-height: 1.2;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+          min-width: 60px;
+          max-width: 90px;
+          height: 55px;
+          box-sizing: border-box;
+          margin-right: 5px;
+          padding: 0 10px;
+        }
+      }
+    }
+
+    ion-list {
+      button {
+        padding-left: 0;
+        min-height: 50px;
+        ion-label {
+          margin-left: 10px;
+          font-weight: bold;
+        }
+      }
+      button.versionInfo {
+        margin-top: 10px;
+        div.item-inner {
+          background: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+//공통 테이블
+.table {
+  width: 100%;
+  border-top: 2px solid #333333;
+  margin-bottom: 10px;
+  background-color: white;
+  .text-left {
+    text-align: left !important;
+  }
+
+  th, td {
+    box-sizing: content-box;
+  }
+
+  th {
+    background-color: #f8f8f8;
+    font-weight: 900;
+    color: #242a30;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  th:last-child {
+    border-right: none;
+  }
+  td {
+    font-size: 12px;
+    padding: 10px;
+    text-align: right;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #c7c7c7;
+  }
+  td:last-child {
+    border-right: none;
+  }
+}
+
+//메인 헤더 스타일
+ion-navbar.mainHeaderStyle {
+  min-height: 44px !important;
+  max-height: 44px !important;
+  border-top: 2px solid color($colors, pointColor1-1);
+
+  .toolbar-background {
+    background-color: color($colors, pointColor1-2) !important;
+  }
+  .bar-button {
+    color: color($colors, basicWhite);
+  }
+
+  ion-grid {
+    padding: 0 !important;
+    ion-col {
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  ion-grid ion-col button {
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  ion-icon.backBtn {
+    background: url(/assets/imgs/sprite.png) 0 0;
+    background-size: 215px;
+    width: 25px;
+    height: 22px;
+  }
+
+  //메모리가 딸려서 테스트가잘 안됨; 브라우저마다 다른 모습을 보여줌
+  ion-col[col-2]:first-child {
+    justify-content: left !important;
+  }
+  ion-col[col-2]:last-child {
+    justify-content: right !important;
+  }
+
+  ion-col.leftAlign {
+    justify-content: left;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    font-weight: 900;
+    margin: 0;
+    color: color($colors, pointColor1-3) !important;
+  }
+
+  h1.hasDropDown:after {
+    content: "";
+    background: url(/assets/imgs/sprite.png) 0px -20px;
+    width: 22px;
+    height: 22px;
+    background-size: 215px;
+    margin-left: 10px;
+  }
+}
+
+h3.titleStyle1 {
+  font-size: 13px !important;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-bottom: 2px solid #2c77bb;
+  background-color: #ffffff;
+
+  &:before {
+    content: "";
+    background: url(/assets/imgs/sprite.png) -172px -22px;
+    width: 22px;
+    height: 22px;
+    background-size: 215px;
+    position: absolute;
+    margin-top: -2px;
+    margin-left: -25px;
+  }
+  span {
+    color: #767676;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 10px;
+    float: right;
+  }
+}
+
+
+button.footerStyleBtn {
+  background-color: #555555 !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  padding: 25px !important;
+  margin: 0 !important;
+
+  .ion-view-icon {
+    background: url(/assets/imgs/sprite.png) -150px -22px;
+    background-size: 215px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+// 헤더에서 사용하는 변수
+$ksm-header-background-color: #313946;
+$ksm-header-border-top-color: #00b5d4;
+
+@mixin defaultStyle() {
+  min-height: 44px;
+  height: 44px;
+  max-height: 44px;
+  padding: 0;
+
+  .toolbar-background {
+    background-color: $ksm-header-background-color !important;
+  }
+
+  border-top: 2px solid $ksm-header-border-top-color;
+
+  // 헤더 컨텐츠 래퍼
+  .header-wrapper {
+    height: 44px;
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+
+  // 아이콘 버튼 래퍼
+  .icon-btn-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-width: 30px;
+    padding: 0 10px;
+  }
+
+  // 헤더 타이틀
+  .header-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    width: auto;
+    line-height: 1.5 !important;
+    display: flex;
+  }
+}
+
+// 헤더 스타일 01
+// [ < 타이틀          ] 형태
+ion-navbar.header-no-menu {
+  @include defaultStyle();
+
+  .ksm-icon-back {
+    width: 25px;
+    margin-right: 5px;
+  }
+}
+
+// 헤더 스타일 02
+// [ 메뉴    타이틀    로그인 ] 형태
+ion-navbar.header-menu-login {
+  @include defaultStyle();
+
+  .header-title {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .icon-btn-wrapper.gnb {
+    width: 42px;
+  }
+  .icon-btn-wrapper.login {
+    width: 50px;
+  }
+
+  .ksm-icon-gnb {
+    width: 22px;
+    height: 35px;
+  }
+
+  .ksm-icon-login, .ksm-icon-logout {
+    width: 30px;
+    height: 35px;
+  }
+}
+
+// 헤더 스타일 03
+// [ 메뉴  드랍다운          ] 형태
+ion-navbar.header-menu-dropdown {
+  @include defaultStyle();
+
+  &:after {
+    display: none;
+  }
+
+  .icon-btn-wrapper.gnb {
+    width: 42px;
+  }
+
+  .header-title {
+    margin-left: 10px;
+  }
+
+  .ksm-icon-gnb {
+    width: 22px;
+    height: 35px;
+  }
+}
+
+// 헤더 스타일 04
+// [ 메뉴 타이틀             ] 형태
+ion-navbar.header-menu-title {
+  @include defaultStyle();
+
+  .header-title {
+    display: inline-block;
+  }
+
+  .icon-btn-wrapper.gnb {
+    width: 42px;
+  }
+
+  .ksm-icon-gnb {
+    width: 22px;
+    height: 35px;
+  }
+}
+
+// 사이드 메뉴 헤더 스타일
+ion-navbar.header-sidemenu {
+  @include defaultStyle();
+
+  .toolbar-background {
+    background: url(/assets/imgs/sidebar_header_bg.png);
+  }
+
+  .header-title {
+    font-weight: normal;
+  }
+
+  .user-text {
+    color: #0091a8;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 26px;
+    border: 1px solid #0093ac;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ksm-icon-user {
+    width: 22px;
+    height: 24px;
+    background-size: 230px;
+    background-position: -3px -296px;
+  }
+
+  .side-menu-btn-wrapper {
+    display: flex;
+    position: absolute;
+    right: 10px;
+
+    .icon-btn-wrapper {
+      padding: 0 3px;
+    }
+
+    .ksm-icon-login, .ksm-icon-logout {
+      width: 30px;
+      height: 35px;
+    }
+
+    .ksm-icon-x {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

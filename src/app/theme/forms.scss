@@ -1,0 +1,116 @@
+// 공통 폼
+$form-input-label-color: #444444;
+$form-border-color: #dddddd;
+.ksm-form-1 {}  // form 자체적인 css는 해당부분에 추가
+.ksm-input-container {
+  padding: 5px 10px 15px 10px;
+
+  .ksm-input-wrapper {
+    position: relative;
+
+    .flex-wrapper {
+      display: flex;
+
+      > * {
+        flex: 1;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    span.ksm-input-label {
+      display: block;
+      width: 100%;
+      font-size: 12px;
+      font-weight: bold;
+      color: $form-input-label-color;
+      padding: 7px 10px 7px 0;
+    }
+    span.ksm-input-sub-label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    input.form-control {
+      font-weight: 400;
+      width: 100%;
+      height: 45px;
+      font-size: 13px;
+      padding-left: 10px;
+      margin: 0;
+      border: 1px solid $form-border-color;
+    }
+
+    .select-wrapper {
+      position: relative;
+
+      select.form-control {
+        width: 100%;
+        height: 30px;
+        color: #767676;
+        -webkit-appearance: none;-moz-appearance: none;appearance: none;
+        background-color: #ffffff;
+        padding-left: 10px;
+        -webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;
+        border: 1px solid $form-border-color;
+
+        & + span.ksm-icon-select {
+          position: absolute;
+          background-color: #f9f9f9;
+          background-position: -55px -95px;
+          background-size: 240px;
+          width: 26px;
+          height: 28px;
+          top: 1px;
+          right: 1px;
+          border-left: 1px solid #dbdbdb;
+          pointer-events: none;
+        }
+      }
+    }
+
+    button.form-control {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+      height: 30px;
+      color: #767676;
+      background-color: #ffffff;
+      border: 1px solid $form-border-color;
+      border-radius: 0;
+      box-shadow: none;
+
+      &.active {
+        border: 1px solid #2C77BB;
+        color: #2C77BB;
+      }
+    }
+  }
+}
+
+
+
+
+// 브라우저 테스트용 비밀번호 입력 input
+.browser-test {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+
+  input {
+    width: 70%;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+  }
+  button {
+    float: right;
+    width: 50px;
+    height: 20px;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+  }
+}

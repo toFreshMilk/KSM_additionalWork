@@ -1,0 +1,137 @@
+// 아이콘 스프라이트 1번
+.icon-sprite-1 {
+  background-image: url(/assets/imgs/sprite.png);
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  vertical-align: sub;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  background-size: 215px;
+}
+
+// GNB 아이콘 스프라이트 2번
+.icon-sprite-gnb-2 {
+  background-image: url(/assets/imgs/sprite_gnb2_NEW.png);
+  background-color: transparent;
+  width: 37px;
+  height: 31px;
+  background-size: 250px;
+}
+
+// 공인인증 아이콘 스프라이트
+.icon-cert-sprite {
+  background: url(/assets/imgs/sprite_ce.png);
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 58px;
+  height: 58px;
+  background-size: 173px;
+}
+
+// 햄버거 메뉴
+.ksm-icon-gnb {
+  background-position: -480px -771px;
+}
+
+// < 버튼
+.ksm-icon-back {
+  background-position: 0 0;
+}
+
+// 로그인 아이콘
+.ksm-icon-login {
+  background-position: -511px -771px;
+}
+
+// 로그아웃 아이콘
+.ksm-icon-logout {
+  background-position: -541px -770px;
+}
+
+// 사이드메뉴 닫기 버튼
+.ksm-icon-x {
+  background-size: 270px;
+  background-position: -506px -80px;
+}
+
+// select box 아래 화살표
+.ksm-arrow-b {
+  background-position: 0px -20px;
+}
+
+// 인증서 폐기 오른쪽 화살표
+.ksm-arrow-r {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-size: 200px;
+  right: -20px;
+  top: 23px;
+  background-position: -80px 7px;
+}
+
+// 인증서 폐기 인증서 없는 아이콘
+.ksm-icon-cert-off {
+  background-position: -96px;
+}
+
+// 인증서 있는 아이콘
+.ksm-icon-cert-on {
+}
+
+// 협상목록 페이지에서 채팅방을 지울때 쓰는 쓰레기통 아이콘
+.ksm-icon-trash {
+  background-position: -121px -86px;
+  background-size: 215px;
+  top: 12px;
+}
+
+// 모달 공지 상세보기 헤더 닫기 버튼(운영공지, 일반 공지 등)
+.ksm-btn-modal-close {
+  background-position: -193px -44px;
+  background-size: 220px;
+  width: 27px;
+  height: 25px;
+  position: absolute;
+  padding: 0;
+  left: 5px;
+}
+
+//////////////////////////////////
+// 공지 상세보기 첨부파일 아이콘 관련
+.attach-file-icon {
+  background-image: url(/assets/imgs/icon-file.png);
+  background-position: 0 -175px;
+  width: 20px;
+  height: 24px;
+  vertical-align: sub;
+  display: inline-block;
+}
+.attach-file-icon.file-zip {
+  background-position: 0 0;
+}
+.attach-file-icon.file-jpg {
+  background-position: 0 -25px;
+}
+.attach-file-icon.file-pdf {
+  background-position: 0 -50px;
+}
+.attach-file-icon.file-xls {
+  background-position: 0 -75px;
+}
+.attach-file-icon.file-xlsx {
+  background-position: 0 -75px;
+}
+.attach-file-icon.file-doc {
+  background-position: 0 -100px;
+}
+.attach-file-icon.file-hwp {
+  background-position: 0 -125px;
+}
+.attach-file-icon.file-txt {
+  background-position: 0 -150px;
+}

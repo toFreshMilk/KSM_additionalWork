@@ -1,0 +1,75 @@
+<ion-menu side="left" type="push" [content]="content">
+  <ion-header>
+    <ion-navbar class="header-sidemenu">
+      <div class="header-wrapper">
+        <div class="icon-btn-wrapper">
+          <button class="icon-sprite-1 ksm-icon-user" *ngIf="defaultIcon"></button>
+          <span *ngIf="!defaultIcon" class="user-text">{{headerTitle.substring(0, 1)}}</span>
+        </div>
+        <span class="header-title">{{headerTitle}}</span>
+        <div class="side-menu-btn-wrapper">
+          <div class="icon-btn-wrapper">
+            <button class="icon-sprite-1" ksm-login></button>
+          </div>
+          <div class="icon-btn-wrapper">
+            <button class="icon-sprite-1 ksm-icon-x" menuClose></button>
+          </div>
+        </div>
+      </div>
+    </ion-navbar>
+  </ion-header>
+  <ion-content class="gnbBg">
+    <h3>전체메뉴</h3>
+    <ion-grid class="totalMenu">
+      <ion-row class="icon-row">
+        <ion-col col-3 *ngFor="let item of menuTree; let idx = index;"
+                 [ngClass]="{active: item.active}"
+                 (click)="doClick(idx)">
+          <button class="icon-row-btn">
+            <ion-icon class="{{item.class}}"></ion-icon>
+            <p>{{item.title}}</p>
+          </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="acco-row">
+        <ion-col col-6 *ngFor="let item of activeMenu.child" (click)="goToPage(item.component)">
+          {{item.title}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div class="directBtnList" *ngIf="!isLogin">
+      <h4 class="btnListHeader">비회원 서비스</h4>
+      <div class="btnWrapper">
+        <button (click)="goToPage(isNotLoginMenu[0].page)">회원<br>가입</button>
+        <button (click)="goToPage(isNotLoginMenu[1].page)">알람<br>내역</button>
+        <button (click)="goToPage(isNotLoginMenu[2].page)">인증서<br>재발급</button>
+        <button (click)="goToPage(isNotLoginMenu[3].page)">간편이용<br>안내</button>
+      </div>
+    </div>
+
+    <div class="directBtnList" *ngIf="isLogin">
+      <h4 class="btnListHeader">회원 서비스</h4>
+      <div class="btnWrapper">
+        <button (click)="goToPage(isLoginMenu[0].page)">관심<br>종목</button>
+        <button (click)="goToPage(isLoginMenu[1].page)">My<br>Page</button>
+        <button (click)="goToPage(isLoginMenu[2].page)">알람<br>내역</button>
+        <button (click)="goToPage(isLoginMenu[3].page)">주문제출<br>내역</button>
+      </div>
+    </div>
+
+    <ion-list>
+      <button ion-item detail-push *ngFor="let item of listMenu" (click)="openURL(item)">{{ item.title }}</button>
+
+      <button ion-item class="versionInfo">
+        <span>버전정보</span>
+        <span class="pull-right">V{{ APP_VERSION }}</span>
+      </button>
+    </ion-list>
+
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

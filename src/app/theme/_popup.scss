@@ -1,0 +1,101 @@
+// region 공통 Alert
+// alert 전체 wrapper tag
+.ksm-common-alert {
+  // inner wrapper tag
+  .alert-wrapper {
+    max-width: 300px !important;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: none;
+
+    // Head wrapper
+    .alert-head {
+      padding: 0;
+
+      // h2 Title
+      .alert-title {
+        padding: 15px 20px;
+        font-size: 18px !important;
+        font-weight: bold;
+        border-bottom: 1px solid #d6d6d6;
+
+        // custom title css
+        .ksm-common-alert-title {
+        }
+      }
+    }
+
+    // Message wrapper
+    .alert-message {
+      padding: 15px 15px 25px 15px;
+
+      // custom message css
+      .ksm-common-alert-message {
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        color: #000000;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    // Button wrapper
+    .alert-button-group {
+      padding: 0;
+      justify-content: center;
+      min-height: 45px;
+
+      button {
+        flex: 1;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        text-align: center;
+
+        span.button-inner {
+          text-align: center;
+          justify-content: center;
+          color: #ffffff;
+          font-size: 16px;
+        }
+
+        // ok button
+        &.btn-ok {
+          background-color: #2d78bc;
+        }
+
+        // cancel button
+        &.btn-cancel {
+          background-color: #999;
+        }
+      }
+    }
+
+    // Input Wrapper
+    .alert-input-group > .alert-input-wrapper > input {
+
+      border: 1px solid #ddd !important;
+      padding-left: 15px !important;
+      color: #000000;
+    }
+  }
+}
+
+.messageDisplayNone {
+  .alert-message {
+    display: none;
+  }
+  .alert-input-group {
+    padding: 24px !important;
+  }
+}
+
+.renameMsgStyle {
+  .alert-message {
+    padding: 20px 24px 5px 24px !important;
+    .ksm-common-alert-message {
+      text-align: left !important;
+    }
+  }
+}
+// endregion
